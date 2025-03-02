@@ -73,3 +73,38 @@ nav a:hover {
 .header-cta .btn-contact:hover {
   opacity: 0.8;
 }
+
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 900px;
+  margin: 130px auto;
+  padding: 20px;
+  height: 50vh;
+}
+
+.hero-content {
+  max-width: 50%;
+}
+
+.hero-content h1 {
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.hero-content .bold-text {
+  font-weight: 900;
+}
+
+.hero-content p {
+  font-size: 18px;
+  margin-top: 10px;
+  color: #666;
+}
+
+.hero-image img {
+  width: 350px;
+  height: auto;
+}
