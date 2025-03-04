@@ -143,16 +143,186 @@ footer {
 .footer-social a img {
   width: 30px;
   height: 30px;
-  transition: opacity 0.2s ease;
+  transition: opacity 0.2s ease transform 0.2s ease;
 }
 
 .footer-social a:hover img {
   opacity: 0.7;
+  transform: scale(1.1);
 }
 
 .footer-copy {
   font-size: 14px;
   opacity: 0.8;
+}
+
+/* Pet project */
+
+.projects {
+  padding: 50px 0;
+  background: #ffffff;
+}
+
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+h1 {
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.project {
+  background: #f9f9f9;
+  padding: 30px;
+  margin-bottom: 40px;
+  border-radius: 8px;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project h2 {
+  font-size: 26px;
+  margin-bottom: 15px;
+  color: #222;
+  background: #f9f9f9;
+}
+
+.project:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 14px rgba(0, 0, 0, 0.15);
+}
+
+.project h3 {
+  margin: 20px;
+}
+
+.project p {
+  font-size: 16px;
+  line-height: 1.5;
+  color: #444;
+}
+
+.project ul {
+  margin-left: 20px;
+}
+
+.project ul li {
+  margin-bottom: 6px;
+  line-height: 1.6;
+}
+
+.key-technologies {
+  margin-top: 20px;
+}
+
+.project h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.tech-icons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.tech-icons img {
+  transition: transform 0.2s ease;
+  height: 60px;
+}
+
+.tech-icons .square {
+  width: 60px;
+}
+
+.tech-icons .rectangle {
+  width: 180px;
+}
+
+.tech-icons img:hover {
+  transform: scale(1.1);
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: auto;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  text-align: center;
+  border-radius: 4px;
+  padding: 5px 10px;
+  position: absolute;
+  z-index: 10;
+  bottom: -40px;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  white-space: nowrap;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+
+.back-to-top {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.btn-back-to-top {
+  display: inline-block;
+  background-color: #000;
+  color: #fff;
+  padding: 12px 24px;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+}
+
+.btn-back-to-top:hover {
+  opacity: 0.8;
+  transform: scale(1.05);
+}
+
+.video-container {
+  text-align: center;
+  margin: 20px 0;
+  margin-top: 30px;
+}
+
+.video-container iframe {
+  width: 100%;
+  max-width: 560px;
+  height: 315px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+a {
+  text-decoration: none;
+  color: #007acc;
+  font-weight: 500;
+  transition: color 0.3s ease, transform 0.3s ease;
+  border-bottom: 1px dashed transparent;
+}
+
+a:hover,
+a:focus {
+  color: #005999;
+  transform: translateY(-2px);
+  border-bottom-color: #007acc;
 }
 
 @media (max-width: 768px) {
@@ -182,5 +352,13 @@ footer {
 
   .footer-container {
     padding: 10px;
+  }
+
+  .project {
+    padding: 20px;
+  }
+
+  .tech-icons {
+    justify-content: center;
   }
 }

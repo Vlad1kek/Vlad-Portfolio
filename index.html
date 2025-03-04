@@ -12,61 +12,35 @@
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
       rel="stylesheet"
     />
-    <title lang="en">Vlad Portfolio</title>
+    <title>Vlad Portfolio</title>
   </head>
   <body>
-    <header>
-      <div class="header-container">
-        <div class="logo">
-          <a href="#">
-            <img src="assets/logo_vlad.png" alt="Vlad Logo" />
-          </a>
+    <div id="header"></div>
+
+    <main>
+      <section class="hero">
+        <div class="hero-content">
+          <h1>
+            <span class="hi-text">HI,</span><br />
+            <span class="bold-text">I’M VLAD PERENESIIENKO</span>
+          </h1>
+          <p>QA Engineer(Manual & Automation)</p>
         </div>
-        <div class="header-right">
-          <nav role="navigation" aria-label="Main Navigation">
-            <ul>
-              <li><a href="#home">Home</a></li>
-              <li><a href="#about">About Me</a></li>
-              <li><a href="#skills">Skills</a></li>
-              <li><a href="#pet-projects">Pet-projects</a></li>
-            </ul>
-          </nav>
-          <div class="header-cta">
-            <a href="#contact" class="btn-contact">Сontact Me</a>
-          </div>
+        <div class="hero-image">
+          <img src="assets\Pencil-sketch.png" alt="Foto Profile" />
         </div>
-      </div>
-    </header>
-    <section class="hero">
-      <div class="hero-content">
-        <h1>
-          <span class="hi-text">HI,</span><br />
-          <span class="bold-text">I’M VLAD PERENESIIENKO</span>
-        </h1>
-        <p>QA Engineer(Manual & Automation)</p>
-      </div>
-      <div class="hero-image">
-        <img src="assets\Pencil-sketch.png" alt="Foto Profile" />
-      </div>
-    </section>
-    <footer>
-      <div class="footer-container">
-        <div class="footer-social">
-          <a href="https://www.linkedin.com/in/perenesiienko" target="_blank">
-            <img src="assets/linkedin-icon.png" alt="LinkedIn" />
-          </a>
-          <a href="https://github.com/Vlad1kek" target="_blank">
-            <img src="assets/github-icon.png" alt="GitHub" />
-          </a>
-          <a href="mailto:vlad@example.com">
-            <img src="assets/mail-icon.png" alt="Mail" />
-          </a>
-        </div>
-        <div class="footer-copy">
-          &copy; 2025 Vlad Perenesiienko. "Quality is never an accident; it is
-          always the result of intelligent effort." – John Ruskin.
-        </div>
-      </div>
-    </footer>
+      </section>
+    </main>
+
+    <div id="footer"></div>
   </body>
+  <script>
+    async function loadComponent(id, url) {
+      const response = await fetch(url);
+      const content = await response.text();
+      document.getElementById(id).innerHTML = content;
+    }
+    loadComponent("header", "header.html");
+    loadComponent("footer", "footer.html");
+  </script>
 </html>
